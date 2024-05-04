@@ -1,0 +1,93 @@
+*{
+    margin:0%;
+    padding: 0%;
+}
+.container{
+    height: 100dvh;
+    background-color: beige;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    place-items: center;
+}
+.container div{
+    height: 20dvh;
+    width: 20dvh;
+    text-align: center;
+    display: inline-block;
+    place-content: center;
+    background-color: aqua;
+    animation: bouge 3s infinite;
+    border-radius: 10px;
+    box-shadow: -9px 14px 14px 1px #719fee;
+}
+
+
+.box1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.box2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.box3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.box4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+button{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    background-color: #1367f8;
+    border-radius: 10px;
+    height: 15%;
+    width: 20%;
+    border: 4px double #002e7c;
+    color: #1367f8;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    cursor:grab;
+
+}
+
+button:hover{
+    
+    border: 2px solid #1f69ec;
+    box-shadow: -9px 14px 14px 1px #719fee;
+    color: #1f69ec;
+    font-size: 22px;
+    animation: bt 2s forwards;
+}
+
+@keyframes bouge {
+    from{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(20deg);
+    }
+    60%{
+        transform: rotate(-20deg);
+    }
+    to{
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes bt {
+    from{
+        
+    }
+    60%{
+        background-color: #ffffff;
+    }
+    to{
+
+    }
+}
